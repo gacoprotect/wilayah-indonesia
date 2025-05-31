@@ -70,7 +70,7 @@ GET /api/villages
       "id": "31",
       "name": "DKI JAKARTA"
     },
-    ...
+    //dst...
   ]
 }
 ```
@@ -120,4 +120,25 @@ Parameter Opsional
 type: provinces, regencies, districts, villages
 
 limit: Jumlah hasil (default: 10)
+
+## 🔄 Pembaruan Data
+### Update file CSV di folder data/
+
+#### Jalankan:
+
+```bash
+npm run generate
+```
+---
+## ⚙️ Environment Variables
+### Buat file .env:
+
+```env
+NODE_ENV=production
+PORT=3000
+ENABLE_CACHE=true
+```
+---
+## 📄 Lisensi
+MIT License
 
