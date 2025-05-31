@@ -6,7 +6,7 @@
     "generate": "php generator/bin/generate",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "build": "npm run generate && npm install"
+    "build": "npm install"
   },
   "dependencies": {
     "apicache": "^1.6.3",
