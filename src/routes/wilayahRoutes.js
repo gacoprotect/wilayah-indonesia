@@ -1,6 +1,7 @@
 import { Router } from "express";
 import WilayahController from "../controllers/WilayahController.js";
 import { validateConcatenatedId } from "../middlewares/validationMiddleware.js";
+import SearchController from "../controllers/SearchController.js";
 
 const router = Router();
 const wilayah = new WilayahController();
