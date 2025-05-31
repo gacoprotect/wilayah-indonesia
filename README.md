@@ -28,4 +28,74 @@ API untuk data wilayah Indonesia (provinsi, kabupaten/kota, kecamatan, desa/kelu
 
 ```bash
 git clone https://github.com/username/wilayah-indonesia-api.git
-cd wilayah-indonesia-api
+cd wilayah-indonesia-api 
+```
+
+---
+
+### 2. Install dependencies
+```bash
+Salin
+Edit
+npm install
+composer install
+```
+
+---
+
+### 3. Generate file JSON dari CSV
+```bash
+Salin
+Edit
+npm run generate
+```
+
+---
+
+## 🔗 Endpoint API
+### 📍 Daftar Wilayah
+```
+GET /api/provinces
+
+GET /api/regencies
+
+GET /api/districts
+
+GET /api/villages
+```
+
+#### Contoh Response
+```json
+
+{
+  "success": true,
+  "data": [
+    {
+      "id": "31",
+      "name": "DKI JAKARTA"
+    },
+    ...
+  ]
+}
+```
+### 🧾 Detail Wilayah
+```
+GET /api/provinces/{id}
+
+GET /api/regencies/{id}
+
+GET /api/districts/{id}
+
+GET /api/villages/{id}
+```
+
+---
+
+## 🧭 Wilayah Berdasarkan Parent
+```
+GET /api/regencies/province/{province_id}
+
+GET /api/districts/regency/{regency_id}
+
+GET /api/villages/district/{district_id}
+```
