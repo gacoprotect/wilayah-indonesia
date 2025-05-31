@@ -1,0 +1,27 @@
+{
+  "name": "gaco/region-api-id",
+  "description": "Static API for Indonesia regions data",
+  "type": "project",
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "league/csv": "^9.8"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Gaco\\RegionApiId\\": "generator/src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Wahyu Wijaya",
+      "email": "gacoprotect@gmail.com"
+    }
+  ],
+  "scripts": {
+    "generate": "@php bin/generate"
+  },
+  "bin": [
+    "bin/generate"
+  ]
+}
