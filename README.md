@@ -35,8 +35,6 @@ cd wilayah-indonesia-api
 
 ### 2. Install dependencies
 ```bash
-Salin
-Edit
 npm install
 composer install
 ```
@@ -45,8 +43,6 @@ composer install
 
 ### 3. Generate file JSON dari CSV
 ```bash
-Salin
-Edit
 npm run generate
 ```
 
@@ -81,11 +77,14 @@ GET /api/villages
 ### 🧾 Detail Wilayah
 ```
 GET /api/provinces/{id}
-
+```
+```
 GET /api/regencies/{id}
-
+```
+```
 GET /api/districts/{id}
-
+```
+```
 GET /api/villages/{id}
 ```
 
@@ -94,8 +93,31 @@ GET /api/villages/{id}
 ## 🧭 Wilayah Berdasarkan Parent
 ```
 GET /api/regencies/province/{province_id}
-
+```
+```
 GET /api/districts/regency/{regency_id}
-
+```
+```
 GET /api/villages/district/{district_id}
 ```
+---
+
+## 🔡 Concatenated ID Lookup
+```
+GET /api/wilayah?q=1101010001
+```
+### Panjang ID	Keterangan
+2 digit	Provinsi
+4 digit	Kabupaten/Kota
+7 digit	Kecamatan
+10 digit	Desa/Kelurahan
+
+## 🔎 Pencarian
+```
+GET /api/search?query=jakarta
+```
+Parameter Opsional
+type: provinces, regencies, districts, villages
+
+limit: Jumlah hasil (default: 10)
+
