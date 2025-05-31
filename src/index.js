@@ -8,7 +8,8 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
-app.use(express.static('static')); // Serve static files directly
+app.use('/static', express.static('static'));
+
 
 // Cache setup
 if (process.env.ENABLE_CACHE === 'true') {
@@ -19,7 +20,7 @@ if (process.env.ENABLE_CACHE === 'true') {
 app.use('/api', wilayahRoutes);
 
 // 404 Handler
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(404).json({
     success: false,
     message: 'Endpoint tidak ditemukan',
@@ -47,3 +48,5 @@ process.on('uncaughtException', (err) => {
 process.on('unhandledRejection', (err) => {
   console.error('Unhandled Rejection:', err);
 });
+
+export default app;
