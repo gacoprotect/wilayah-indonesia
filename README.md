@@ -16,9 +16,9 @@ API untuk data wilayah Indonesia (provinsi, kabupaten/kota, kecamatan, desa/kelu
 
 ## 📦 Persyaratan
 
-- **Node.js** v18+
+
 - **PHP** 8.0+ (untuk generator)
-- **NPM**
+
 
 ---
 
