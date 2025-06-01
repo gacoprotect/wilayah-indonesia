@@ -9,7 +9,7 @@ $quiet = in_array('--quiet', $argv);
 
 $generator = new Generate(
     __DIR__.'/../../data',
-    __DIR__.'/../../static',
+    __DIR__.'/../../static/api',
     $quiet
 );
 
